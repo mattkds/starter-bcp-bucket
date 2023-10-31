@@ -56,3 +56,9 @@ public Storage storage() throws IOException {
 }
 ```
 
+### Test the API
+
+#### GET
+`send-to-gcs` [http://localhost:8080/send-to-gcs/test](#http://localhost:8080/send-to-gcs/test) <br/>
+
+If your GCP configuration is correct, a file should be generated and send to your chosen bucket.
