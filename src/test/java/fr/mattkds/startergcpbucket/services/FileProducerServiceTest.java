@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class FileProducerServiceTest {
     @Test
-    public void shouldReturnFilename(){
+    protected void shouldReturnFilename(){
         //Arrange
         String content = "fileTest";
         String fileNameExpected = "fileTest_generated.txt";
