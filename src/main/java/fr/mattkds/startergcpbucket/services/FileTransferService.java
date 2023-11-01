@@ -31,7 +31,7 @@ public class FileTransferService {
      * FileTransfer Service constructor
      *
      * @param storage             the storage gcp object to inject
-     * @param fileProducerService
+     * @param fileProducerService the fileProducer service
      */
     public FileTransferService(Storage storage, FileProducerService fileProducerService) {
         this.storage = storage;
