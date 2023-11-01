@@ -28,11 +28,11 @@ public class FileTransferService {
     * storage is the Storage bean declare in the common GCP config on class GcpConfig
     */
     private Storage storage;
-    /*
-     * bucket is the bucket used to store our files
-     */
-    private Bucket bucket;
 
+    /**
+     * FileTransfer Service constructor
+     * @param storage the storage gcp object to inject
+     */
     public FileTransferService(Storage storage) {
         this.storage = storage;
     }

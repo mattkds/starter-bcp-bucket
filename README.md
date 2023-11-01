@@ -6,7 +6,7 @@ This repository is a simple implementation of a spring web app using gcp cloud t
 
 ### Technical Stack
 
-[Java 21](https://openjdk.org/projects/jdk/21/)
+[Java 17](https://openjdk.org/projects/jdk/17/)
 
 ### Built With
 
