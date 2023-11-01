@@ -13,7 +13,6 @@ import java.nio.charset.StandardCharsets;
  * FileTransfer Service dedicated to sending and reading operation on GCP Buckets
  * bucketName represent the GCP Bucket name use to store our uploaded files
  *
-
  */
 @Service
 public class FileTransferService {
@@ -27,7 +26,7 @@ public class FileTransferService {
     /*
     * storage is the Storage bean declare in the common GCP config on class GcpConfig
     */
-    private Storage storage;
+    private final Storage storage;
 
     /**
      * FileTransfer Service constructor
