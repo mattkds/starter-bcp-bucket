@@ -1,3 +1,5 @@
+[![DeepSource](https://app.deepsource.com/gh/mattkds/starter-gcp-bucket.svg/?label=active+issues&show_trend=true&token=kd68QoUoLN6R0XJFABbPmvpG)](https://app.deepsource.com/gh/mattkds/starter-gcp-bucket/)
+[![DeepSource](https://app.deepsource.com/gh/mattkds/starter-gcp-bucket.svg/?label=resolved+issues&show_trend=true&token=kd68QoUoLN6R0XJFABbPmvpG)](https://app.deepsource.com/gh/mattkds/starter-gcp-bucket/)
 # starter-gcp-bucket
 Starter App to implement a GCP Bucket System with Java and Spring framework
 
