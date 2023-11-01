@@ -20,20 +20,22 @@ public class FileTransferService {
     @Value("${starter-gcp-bucket.bucket-name}")
     private String bucketName;
     /*
-     * File extension use for our uploaded files
-     */
-    private static final String EXTENSION_TXT = ".txt";
-    /*
     * storage is the Storage bean declare in the common GCP config on class GcpConfig
     */
     private final Storage storage;
-
+    /*
+     * File producer Service to provide file building methods
+     */
+    private final FileProducerService fileProducerService;
     /**
      * FileTransfer Service constructor
-     * @param storage the storage gcp object to inject
+     *
+     * @param storage             the storage gcp object to inject
+     * @param fileProducerService
      */
-    public FileTransferService(Storage storage) {
+    public FileTransferService(Storage storage, FileProducerService fileProducerService) {
         this.storage = storage;
+        this.fileProducerService = fileProducerService;
     }
 
     /**
@@ -45,8 +47,8 @@ public class FileTransferService {
      */
     public BlobId sendBlob(String content) {
         Bucket bucket = this.getBucket(bucketName);
-        String blobName = content + "generated" + EXTENSION_TXT;
         byte[] blobContent = content.getBytes(StandardCharsets.UTF_8);
+        String blobName = fileProducerService.getFileName(content);
         Blob blob = bucket.create(blobName, blobContent);
         return blob.getBlobId();
     }

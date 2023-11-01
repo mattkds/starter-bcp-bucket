@@ -33,7 +33,7 @@ jobs:
         uses: deepsourcelabs/test-coverage-action@master
         with:
           key: java
-          coverage-file: coverage.xml
+          coverage-file: target/site/jacoco/jacoco.xml
           dsn: ${{ secrets.DEEPSOURCE_DSN }}
 
     #- name: Publish to GitHub Packages Apache Maven
